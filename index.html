@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="title">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="2500" height="2500"><style>.st0{fill:#007acc}.st1{fill:#fff}</style><path class="st0" d="M0 200V0h400v400H0"/><path class="st1" d="M87.7 200.7V217h52v148h36.9V217h52v-16c0-9 0-16.3-.4-16.5 0-.3-31.7-.4-70.2-.4l-70 .3v16.4l-.3-.1zM321.4 184c10.2 2.4 18 7 25 14.3 3.7 4 9.2 11 9.6 12.8 0 .6-17.3 12.3-27.8 18.8-.4.3-2-1.4-3.6-4-5.2-7.4-10.5-10.6-18.8-11.2-12-.8-20 5.5-20 16 0 3.2.6 5 1.8 7.6 2.7 5.5 7.7 8.8 23.2 15.6 28.6 12.3 41 20.4 48.5 32 8.5 13 10.4 33.4 4.7 48.7-6.4 16.7-22 28-44.3 31.7-7 1.2-23 1-30.5-.3-16-3-31.3-11-40.7-21.3-3.7-4-10.8-14.7-10.4-15.4l3.8-2.4 15-8.7 11.3-6.6 2.6 3.5c3.3 5.2 10.7 12.2 15 14.6 13 6.7 30.4 5.8 39-2 3.7-3.4 5.3-7 5.3-12 0-4.6-.7-6.7-3-10.2-3.2-4.4-9.6-8-27.6-16-20.7-8.8-29.5-14.4-37.7-23-4.7-5.2-9-13.3-11-20-1.5-5.8-2-20-.6-25.7 4.3-20 19.4-34 41-38 7-1.4 23.5-.8 30.4 1l-.2.2z"/></svg>
+        </div>
+        <h1>TypeScript Haqida</h1>
+
+      <div class="intro">
+        <p>
+            <strong>TypeScript</strong>
+           - bu JavaScript-ning kengaytirilgan versiyasi bo'lib,
+          tiplarga asoslangan qo'shimcha xususiyatlarni taqdim etadi. U katta
+          loyihalarda kodni samarali boshqarish va xatolarni oldindan aniqlash
+          imkonini beradi. Statik tiplarni qo'llab-quvvatlaydigan, ommabop va kuchli tip tizimiga ega bo'lgan dasturlash tili. TypeScript, JavaScript'ning barcha imkoniyatlarini o'z ichiga oladi va unga qo'shimcha ravishda ba'zi yangi xususiyatlar ham beradi. TypeScript, JavaScript dasturlarini ishlab chiqishda aniqlikni oshiradi va kengaytirilgan tahlilni amalga oshirishga imkon beradi.
+        </p>
+        <strong>Asosiy xususiyatlar:
+        </strong>
+        <ul>
+            <li>
+                Statik tip tizimi: TypeScript kodni yozish jarayonida o'zgaruvchilar va funksiyalar uchun tiplarni belgilash imkonini beradi. Bu kompilyatsiya vaqtida xatoliklarni aniqlashga yordam beradi va kodni tushunishni osonlashtiradi.
+            </li>
+            <li>
+                Transpilyatsiya: TypeScript kodini JavaScript kodiga transpilyatsiya qilish orqali ishlatiladi. TypeScript fayllari .ts kengaytmasiga ega bo'lib, ularni JavaScript kodiga .js kengaytmasiga aylantirish kerak. Bu jarayonni TypeScript transpiler (tsc) amalga oshiradi.
+            </li>
+            <li>
+                Yaxshi xatoliklarni aniqlash: Statik tip tizimi yordamida xatoliklar kompilyatsiya vaqtida aniqlanadi, bu esa kodni ishlab chiqish jarayonini osonlashtiradi va tezlashtiradi.
+            </li>
+            <li>
+                Obyektga yo'naltirilgan dasturlash (OOP): TypeScript Java, C#, va boshqa OOP tillariga o'xshash sinflar (classes), meros olish (inheritance), polimorfizm (polymorphism), interfeyslar (interfaces) kabi imkoniyatlarni taqdim etadi.
+            </li>
+            <li>
+                Type Inference (tipni aniqlash): TypeScript ba'zi o'zgaruvchilarni yoki ifodalarni tiplashni avtomatik ravishda amalga oshirishi mumkin. Misol uchun, agar siz sonni o'zgaruvchi sifatida ishlatsangiz, TypeScript ularning tipini avtomatik tarzda aniqlaydi.
+            </li>
+        </ul>
+      </div>
+
+      <ul class="type-list">
+        <li>
+          <div class="type-header">
+            <h3>Any Type</h3>
+            <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+          </div>
+          <div class="type-info">
+            <p>
+              Any tipi TypeScript-da istalgan turdagi qiymatni saqlash uchun
+              ishlatiladi. U JavaScript-ning dinamik tipiga o'xshaydi.
+            </p>
+            <div class="code-example">
+              <pre><code class="language-typescript">let anyValue: any = 10;
+anyValue = "Hello";
+anyValue = true;
+anyValue = [1, 2, 3];</code></pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="type-header">
+            <h3>Union Type</h3>
+            <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+          </div>
+          <div class="type-info">
+            <p>
+              Union tipi bir nechta turlardan birini qabul qilishi mumkin
+              bo'lgan o'zgaruvchilarni aniqlash imkonini beradi.
+            </p>
+            <div class="code-example">
+              <pre><code class="language-typescript">let id: number | string;
+id = 101;
+id = "TS101";</code></pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="type-header">
+            <h3>Tuple Type</h3>
+            <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+          </div>
+          <div class="type-info">
+            <p>
+              Tuple tipi massivning har bir elementi uchun aniq turni belgilash
+              imkonini beradi.
+            </p>
+            <div class="code-example">
+              <pre><code class="language-typescript">let person: [string, number, boolean];
+person = ["John", 30, true];</code></pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="type-header">
+            <h3>Enum Type</h3>
+            <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+          </div>
+          <div class="type-info">
+            <p>
+              Enum tipi o'zaro bog'liq konstantalar to'plamini yaratish uchun
+              ishlatiladi.
+            </p>
+            <div class="code-example">
+              <pre><code class="language-typescript">enum Color {
+  Red,
+  Green,
+  Blue
+}
+let c: Color = Color.Green;</code></pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="type-header">
+            <h3>Void Type</h3>
+            <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+          </div>
+          <div class="type-info">
+            <p>
+              Void tipi odatda hech qanday qiymat qaytarmaydigan funksiyalar
+              uchun ishlatiladi.
+            </p>
+            <div class="code-example">
+              <pre><code class="language-typescript">function logMessage(message: string): void {
+  console.log(message);
+}</code></pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="type-header">
+            <h3>Function Type</h3>
+            <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+          </div>
+          <div class="type-info">
+            <p>
+              Function tipi funksiyaning parametrlari va qaytarish qiymatining
+              turlarini aniqlash uchun ishlatiladi.
+            </p>
+            <div class="code-example">
+              <pre><code class="language-typescript">let add: (x: number, y: number) => number;
+add = (a: number, b: number) => a + b;</code></pre>
+            </div>
+          </div>
+        </li>
+        <li>
+            <div class="type-header">
+              <h3>Interface</h3>
+              <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="type-info">
+              <p>
+                Interface (interfeys) — bu obyektnig tuzilmasini belgilash uchun ishlatiladi.
+              </p>
+              <div class="code-example">
+                <pre><code class="language-typescript">interface Person {
+    name: string;
+    age: number;
+}
+let person: Person = { name: 'Alice', age: 30 };
+                </code></pre>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="type-header">
+              <h3>Classes</h3>
+              <button class="toggle-btn" onclick="toggleInfo(this)">+</button>
+            </div>
+            <div class="type-info">
+              <p>
+                TypeScriptda sinflar (classes) yordamida ob'ektga yo'naltirilgan dasturlashni amalga oshirish mumkin.
+              </p>
+              <div class="code-example">
+                <pre><code class="language-typescript">class Person {
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+    greet() {
+        console.log('Hello, ' + this.name);
+    }
+}
+let person = new Person('Alice');
+person.greet();  // Output: Hello, Alice
+
+                </code></pre>
+              </div>
+            </div>
+          </li>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+      function toggleInfo(button) {
+        const infoDiv = button.parentElement.nextElementSibling;
+        infoDiv.classList.toggle("show");
+        button.textContent = infoDiv.classList.contains("show") ? "-" : "+";
+      }
+    </script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
